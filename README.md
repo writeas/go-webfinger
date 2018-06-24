@@ -1,4 +1,4 @@
-[![GoDoc](https://godoc.org/github.com/sheenobu/go-webfinger?status.svg)](https://godoc.org/github.com/sheenobu/go-webfinger)
+[![GoDoc](https://godoc.org/github.com/writeas/go-webfinger?status.svg)](https://godoc.org/github.com/writeas/go-webfinger)
 
 # go-webfinger
 
