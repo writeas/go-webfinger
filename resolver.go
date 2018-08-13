@@ -6,7 +6,7 @@ package webfinger
 type Resolver interface {
 
 	// FindUser finds the user given the username and hostname.
-	FindUser(username string, hostname string, r []Rel) (*Resource, error)
+	FindUser(username string, hostname, requestHost string, r []Rel) (*Resource, error)
 
 	// DummyUser allows us to return a dummy user to avoid user-enumeration via webfinger 404s. This
 	// can be done in the webfinger code itself but then it would be obvious which users are real
