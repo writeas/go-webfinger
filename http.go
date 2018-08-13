@@ -54,7 +54,7 @@ func (s *Service) Webfinger(w http.ResponseWriter, r *http.Request) {
 		rels = append(rels, Rel(r))
 	}
 
-	rsc, err := s.Resolver.FindUser(a.Name, a.Hostname, rels)
+	rsc, err := s.Resolver.FindUser(a.Name, a.Hostname, r.Host, rels)
 	if err != nil {
 		if !s.Resolver.IsNotFoundError(err) {
 			s.ErrorHandler.ServeHTTP(w, addError(r, err))

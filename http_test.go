@@ -19,7 +19,7 @@ import (
 type dummyUserResolver struct {
 }
 
-func (d *dummyUserResolver) FindUser(username string, hostname string, rel []Rel) (*Resource, error) {
+func (d *dummyUserResolver) FindUser(username string, hostname, requestHost string, rel []Rel) (*Resource, error) {
 	if username == "hello" {
 		if len(rel) == 2 && rel[0] == "x" && rel[1] == "y" {
 			return &Resource{
