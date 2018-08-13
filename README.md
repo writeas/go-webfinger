@@ -4,6 +4,8 @@
 
 go-webfinger is a golang webfinger server implementation. See [v1.0](https://github.com/writeas/go-webfinger/releases/tag/1.0) for the latest stable version, and our [Code.as repo](https://code.as/writeas/go-webfinger) for the Write.as-specific implementation.
 
+Past v1.0, this fork was made especially for federation support on [Write.as](https://write.as), which includes users across write.as, \*.writeas.com, and custom domains we host. The `master` branch contains changes specific to our implementation, and will change without notification.
+
 ## Usage
 
 `webfinger.Service` is implemented as a net/http handler, which means
