@@ -11,13 +11,13 @@ type account struct {
 }
 
 func (a *account) ParseString(str string) (err error) {
-	if !strings.HasPrefix(str, "acct:") {
-		err = errors.New("URI is not an account")
-		return
+	items := strings.Split(str, "@")
+	if strings.HasPrefix(str, "acct:") {
+		a.Name = items[0][5:]
+	} else {
+		a.Name = items[0]
 	}
 
-	items := strings.Split(str, "@")
-	a.Name = items[0][5:]
 	if len(items) < 2 {
 		//TODO: this might not be required
 		err = errors.New("No domain on account")
