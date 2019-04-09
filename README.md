@@ -2,14 +2,9 @@
 
 # go-webfinger
 
-go-webfinger is a golang webfinger server implementation. See [v1.0](https://github.com/writeas/go-webfinger/releases/tag/1.0) for the latest stable version, and our [Code.as repo](https://code.as/writeas/go-webfinger) for the Write.as-specific implementation.
+go-webfinger is a golang webfinger server implementation.
 
-Past v1.0, this fork was made especially for federation support on [Write.as](https://write.as), which includes users across write.as, \*.writeas.com, and custom domains we host. The `master` branch contains changes specific to our implementation, and will change without notification.
-
-## Status
-
-Project has had no input/work by me (sheenobu) in the past 2 years. Marking
-the package as 1.0 to match [github.com/writeas/go-webfinger](https://github.com/writeas/go-webfinger).
+See [v1.0](https://github.com/writeas/go-webfinger/releases/tag/1.0) for the latest stable version -- you should fork from here if you'd like to use this in your own projects. Past v1.0, this libary is built particularly to support federation on [WriteFreely](https://writefreely.org) / [Write.as](https://write.as).
 
 ## Usage
 
@@ -61,3 +56,7 @@ A PreFlight handler which sets the Content-Type to `application/jrd+json`. Disab
 ### CORS 
 
 A PreFlight handler which adds the CORS headers. Disable or override via `wf.PreHandlers[webfinger.CorsMiddleware].`
+
+## Credits
+
+Thanks to [@sheenobu](https://github.com/sheenobu) for all the [initial work](https://github.com/sheenobu/go-webfinger) on this library!
